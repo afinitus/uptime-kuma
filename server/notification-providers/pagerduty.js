@@ -96,9 +96,10 @@ class PagerDuty extends NotificationProvider {
         };
 
         const baseURL = await Settings.get("primaryBaseURL");
-        if (baseURL && monitorInfo) {
-            options.client = "Uptime Kuma";
-            options.client_url = baseURL + getMonitorRelativeURL(monitorInfo.id);
+        if (baseURL && monitorInfo && monitorInfo.id) {
+            // client and client_url belong in the Events API v2 request body, not the axios options
+            options.data.client = "Uptime Kuma";
+            options.data.client_url = baseURL + getMonitorRelativeURL(monitorInfo.id);
         }
 
         let result = await axios.request(options);
