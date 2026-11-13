@@ -5,7 +5,13 @@
                 {{ $t("milkyHttpAddress") }}
                 <span style="color: red"><sup>*</sup></span>
             </label>
-            <input id="HttpUrl" v-model="$parent.notification.httpAddr" type="text" class="form-control" required />
+            <input
+                id="milky-http-addr"
+                v-model="$parent.notification.httpAddr"
+                type="text"
+                class="form-control"
+                required
+            />
         </div>
         <div class="mb-3">
             <label for="milky-access-token" class="form-label">
@@ -13,7 +19,7 @@
                 <span style="color: red"><sup>*</sup></span>
             </label>
             <input
-                id="HttpUrl"
+                id="milky-access-token"
                 v-model="$parent.notification.accessToken"
                 type="password"
                 class="form-control"
@@ -37,7 +43,13 @@
                 {{ $t("milkyUserOrGroupId") }}
                 <span style="color: red"><sup>*</sup></span>
             </label>
-            <input id="secretKey" v-model="$parent.notification.recieverId" type="text" class="form-control" required />
+            <input
+                id="milky-reciever-id"
+                v-model="$parent.notification.recieverId"
+                type="text"
+                class="form-control"
+                required
+            />
         </div>
 
         <div class="form-text">

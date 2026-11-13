@@ -5,14 +5,26 @@
                 {{ $t("onebotHttpAddress") }}
                 <span style="color: red"><sup>*</sup></span>
             </label>
-            <input id="HttpUrl" v-model="$parent.notification.httpAddr" type="text" class="form-control" required />
+            <input
+                id="onebot-http-addr"
+                v-model="$parent.notification.httpAddr"
+                type="text"
+                class="form-control"
+                required
+            />
         </div>
         <div class="mb-3">
             <label for="onebot-access-token" class="form-label">
                 AccessToken
                 <span style="color: red"><sup>*</sup></span>
             </label>
-            <input id="HttpUrl" v-model="$parent.notification.accessToken" type="text" class="form-control" required />
+            <input
+                id="onebot-access-token"
+                v-model="$parent.notification.accessToken"
+                type="text"
+                class="form-control"
+                required
+            />
             <div class="form-text">
                 <p>{{ $t("onebotSafetyTips") }}</p>
             </div>
@@ -31,7 +43,13 @@
                 {{ $t("onebotUserOrGroupId") }}
                 <span style="color: red"><sup>*</sup></span>
             </label>
-            <input id="secretKey" v-model="$parent.notification.recieverId" type="text" class="form-control" required />
+            <input
+                id="onebot-reciever-id"
+                v-model="$parent.notification.recieverId"
+                type="text"
+                class="form-control"
+                required
+            />
         </div>
 
         <div class="form-text">
